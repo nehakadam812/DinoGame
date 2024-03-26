@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dino</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.game-cont{
+			height: 200px;
+			width: 500px;
+			border:2px solid black;
+			background-image: url("https://media.tenor.com/DQdJ0QoGfwAAAAAM/art.gif");
+			background-size: 30%;
+			background-repeat: repeat-x;
+		}
+		.dino{
+			height: 50px;
+			width: 20px;
+			position: relative;
+			top: 150px;
+			background-image:url("https://www.clipartmax.com/png/middle/101-1017708_crayon-shin-chan-animation-television-show-drawing-my-favourite-cartoon-character-shin.png");
+			background-position: center;
+			background-size: 300%;
+			
+		}
+		.jump{
+			animation:jump 0.5s ease-in-out 1;
+		}
+        @keyframes jump{
+        	50%{
+        		top: 100px;
+        	}
+        }
+        .block{
+        	height: 20px;
+        	width: 20px;
+        	background-image: url("");
+        	background-position: center;
+        	background-size: 150%;
+        	position: relative;
+        	top: 130px;
+        	left: 480px;
+        	animation:move 4s linear infinite;
+        }
+
+        @keyframes move{
+        	0%{
+        		left:480px;
+
+        	}
+        	100%{
+        		left: -30px;
+        	}
+        }   
+
+
+
+	</style>
+</head>
+<body>
+	<div class="game-cont">
+		<div class="dino" onclick="addJump()"></div>
+	</div>
+	<div class="block"></div>
+		
+	</div>
+
+	<script type="text/javascript">
+		function addJump(){
+			let dino=documnet.getElementByClassName("dino")[0];
+			if(dino.getAttribute("class")=="dino"){
+				dino.setAttribute("class","dino jump")
+				setTimeout(()=>{
+					dino.setAttribute("class","dino");
+				},1000)
+			}
+		}
+	</script>
+
+</body>
+</html>
