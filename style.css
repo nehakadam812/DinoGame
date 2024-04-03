@@ -1,0 +1,65 @@
+    *{
+			padding: 0px;
+			margin: 0px;
+
+		}
+		.game-cont{
+			height: 400px;
+			width: 95%;
+			border: 2px solid black;
+			margin-right: 120px;
+               background-color: lightblue;
+
+			background-image: url("https://cdn.dribbble.com/users/2921317/screenshots/6689167/vehicle_moving_animation.gif");
+			background-size: 25%;
+			background-repeat: repeat-x;
+		}
+		.main{
+			margin-top: 50px;
+			margin-left: 50px;
+			
+			
+			
+		}
+		.dino{
+			height: 70px;
+			width: 70px;
+			position: relative;
+			top: 320px;
+			background-image: url("https://media1.tenor.com/m/uUhfvMKKrlsAAAAC/tom-and-jerry-cat.gif");
+			background-position: center;
+			background-size: 150%;
+
+		}
+		.jump{
+			animation: jump 0.5s ease-in-out 1;
+		}
+		@keyframes jump{
+			50%{
+				top: 100px;
+			}
+		}
+		.block{
+			height: 50px;
+			width: 20px;
+			background-image: url("https://i.gifer.com/Qi4r.gif");
+			background-position: center;
+			background-size: 270%;
+			position: relative;
+			top: 280px;
+			left: 20px;
+			animation: move 4s linear infinite;
+		}
+		@keyframes move{
+			0%{
+				left: 90%;
+			}
+			100%{
+				left: -30px;
+			}
+		}
+		#score{
+			position: fixed;
+			top: 10px;
+			left: 20px;
+		}
